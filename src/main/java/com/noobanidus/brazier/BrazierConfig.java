@@ -12,7 +12,7 @@ public class BrazierConfig {
     @Config.Comment("Specify the multiplier to be applied for complex essentia, rounded down")
     @Config.Name("Essentia bonus")
     @Config.RangeDouble(min = 0)
-    public static double complexBonus = 0.6;
+    public static double complexBonus = 0.15;
 
     @Config.Comment("Total time it takes to grow a curiosity in ticks")
     @Config.Name("Total cook time")

@@ -87,8 +87,8 @@ public class GuiBrazier extends GuiContainer {
             if (aspects != null) {
                 Aspect[] aspectList = aspects.getAspects();
                 if (aspectList.length != 0) {
-                    bonusTicks *= AspectUtil.complexity(aspectList[0]);
-                    if ((int) bonusTicks != 0) {
+                    if (AspectUtil.complexity(aspectList[0]) != 0) {
+                        bonusTicks *= AspectUtil.complexity(aspectList[0]);
                         lines.add("");
                         lines.add(TextFormatting.LIGHT_PURPLE + I18n.format("gui.brazier.added_bonus", bonusTicks));
                     }
