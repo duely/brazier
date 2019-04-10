@@ -1,0 +1,17 @@
+{
+  "_comment": [
+    "Cycle curiosities."
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thaumcraft:curio",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "thaumcraft:curio",
+    "count": 1,
+    "data": 1
+  }
+}
