@@ -1,0 +1,23 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"28": "thaumcraft:blocks/arcane_brick_stone",
+		"185": "thaumcraft:blocks/spa_side",
+		"219": "brazier:blocks/burner_off",
+		"particle": "thaumcraft:blocks/arcane_brick_stone"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 12, 16],
+			"faces": {
+				"north": {"uv": [0, 4, 16, 16], "texture": "#185"},
+				"east": {"uv": [0, 4, 16, 16], "texture": "#185"},
+				"south": {"uv": [0, 4, 16, 16], "texture": "#185"},
+				"west": {"uv": [0, 4, 16, 16], "texture": "#185"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#219"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#28"}
+			}
+		}
+	]
+}

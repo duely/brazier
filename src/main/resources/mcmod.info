@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "brazier",
+    "name": "Brazier",
+    "description": "Burn essentia to get research curios!",
+    "version": "${version}",
+    "credits": "Noobanidus",
+    "logoFile": "assets/brazier/textures/logo.png",
+    "mcversion": "${mc_version}",
+    "url": "http://github.com/duely/brazier",
+    "updateUrl": "",
+    "authorList": [
+      "Noobanidus"
+    ],
+    "parent": "",
+    "screenshots": [],
+    "dependencies": [
+      "forge"
+    ]
+  }
+]

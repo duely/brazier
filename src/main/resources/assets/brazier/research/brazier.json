@@ -1,0 +1,31 @@
+{
+    "entries": [
+        {
+            "key": "BRAZIER",
+            "name": "research.brazier.title",
+            "icons": [
+                "brazier:brazier"
+            ],
+            "category": "BASICS",
+            "location": [
+                2,
+                1
+            ],
+            "parents": [
+                "KNOWLEDGETYPES"
+            ],
+            "meta": [
+                "ROUND",
+                "HIDDEN"
+            ],
+            "stages": [
+                {
+                    "text": "research.brazier.stage.1",
+                    "recipes": [
+                        "brazier:brazier"
+                    ]
+                }
+            ]
+        }
+    ]
+}

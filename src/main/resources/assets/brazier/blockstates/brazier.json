@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": {
+            "model": "brazier:brazier"
+        },
+        "inventory": {
+            "model": "brazier:brazier"
+        }
+    }
+}
