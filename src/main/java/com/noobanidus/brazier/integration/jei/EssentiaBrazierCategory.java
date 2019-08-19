@@ -17,46 +17,46 @@ import thaumcraft.api.items.ItemsTC;
 import javax.annotation.Nullable;
 
 public class EssentiaBrazierCategory implements IRecipeCategory<EssentiaBrazierWrapper> {
-    private final IDrawable background;
-    private final IDrawable icon;
+	private final IDrawable background;
+	private final IDrawable icon;
 
-    public EssentiaBrazierCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(new ResourceLocation(Brazier.MODID, "textures/gui/jei.png"), 0, 0, 160, 76);
-        this.icon = helper.createDrawableIngredient(new ItemStack(Registrar.Items.brazier));
-    }
+	public EssentiaBrazierCategory (IGuiHelper helper) {
+		this.background = helper.createDrawable(new ResourceLocation(Brazier.MODID, "textures/gui/jei.png"), 0, 0, 160, 76);
+		this.icon = helper.createDrawableIngredient(new ItemStack(Registrar.Items.brazier));
+	}
 
-    @Override
-    public String getUid() {
-        return JEIBrazier.ESSENTIA_BURNER;
-    }
+	@Override
+	public String getUid () {
+		return JEIBrazier.ESSENTIA_BURNER;
+	}
 
-    @Override
-    public String getTitle() {
-        return I18n.format("tile.brazier.name");
-    }
+	@Override
+	public String getTitle () {
+		return I18n.format("tile.brazier.name");
+	}
 
-    @Override
-    public String getModName() {
-        return Brazier.MODNAME;
-    }
+	@Override
+	public String getModName () {
+		return Brazier.MODNAME;
+	}
 
-    @Override
-    public IDrawable getBackground() {
-        return this.background;
-    }
+	@Override
+	public IDrawable getBackground () {
+		return this.background;
+	}
 
-    @Nullable
-    @Override
-    public IDrawable getIcon() {
-        return this.icon;
-    }
+	@Nullable
+	@Override
+	public IDrawable getIcon () {
+		return this.icon;
+	}
 
-    @Override
-    public void setRecipe(IRecipeLayout recipeLayout, EssentiaBrazierWrapper recipeWrapper, IIngredients ingredients) {
-        IGuiItemStackGroup group = recipeLayout.getItemStacks();
-        group.init(0, true, 47, 29);
-        group.set(0, recipeWrapper.getContainerInputs());
-        group.init(1, false, 107, 29);
-        group.set(1, new ItemStack(ItemsTC.curio, 1, BrazierConfig.meta));
-    }
+	@Override
+	public void setRecipe (IRecipeLayout recipeLayout, EssentiaBrazierWrapper recipeWrapper, IIngredients ingredients) {
+		IGuiItemStackGroup group = recipeLayout.getItemStacks();
+		group.init(0, true, 47, 29);
+		group.set(0, recipeWrapper.getContainerInputs());
+		group.init(1, false, 107, 29);
+		group.set(1, new ItemStack(ItemsTC.curio, 1, BrazierConfig.meta));
+	}
 }

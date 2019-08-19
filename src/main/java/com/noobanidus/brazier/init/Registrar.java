@@ -18,32 +18,32 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod.EventBusSubscriber(modid= Brazier.MODID)
+@Mod.EventBusSubscriber(modid = Brazier.MODID)
 public class Registrar {
-    public static class Blocks {
-        public static Block brazier, lit_brazier;
-    }
+	public static class Blocks {
+		public static Block brazier, lit_brazier;
+	}
 
-    public static class Items {
-        public static Item brazier;
-    }
+	public static class Items {
+		public static Item brazier;
+	}
 
-    @SubscribeEvent
-    public static void onBlockRegister (RegistryEvent.Register<Block> event) {
-        event.getRegistry().register(Blocks.brazier = new BlockBrazier("brazier", Material.ROCK, false).setCreativeTab(Brazier.tab));
-        event.getRegistry().register(Blocks.lit_brazier = new BlockBrazier("lit_brazier", Material.ROCK, true).setLightLevel(0.9f).setCreativeTab(Brazier.tab));
+	@SubscribeEvent
+	public static void onBlockRegister (RegistryEvent.Register<Block> event) {
+		event.getRegistry().register(Blocks.brazier = new BlockBrazier("brazier", Material.ROCK, false).setCreativeTab(Brazier.tab));
+		event.getRegistry().register(Blocks.lit_brazier = new BlockBrazier("lit_brazier", Material.ROCK, true).setLightLevel(0.9f).setCreativeTab(Brazier.tab));
 
-        GameRegistry.registerTileEntity(TileEntityBrazier.class, new ResourceLocation(Brazier.MODID, "brazier"));
-    }
+		GameRegistry.registerTileEntity(TileEntityBrazier.class, new ResourceLocation(Brazier.MODID, "brazier"));
+	}
 
-    @SubscribeEvent
-    public static void onItemRegister (RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(Items.brazier = new ItemBlock(Blocks.brazier).setRegistryName(Blocks.brazier.getRegistryName()).setCreativeTab(Brazier.tab));
-    }
+	@SubscribeEvent
+	public static void onItemRegister (RegistryEvent.Register<Item> event) {
+		event.getRegistry().register(Items.brazier = new ItemBlock(Blocks.brazier).setRegistryName(Blocks.brazier.getRegistryName()).setCreativeTab(Brazier.tab));
+	}
 
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public static void onModelRegister (ModelRegistryEvent event) {
-        ModelLoader.setCustomModelResourceLocation(Items.brazier, 0, new ModelResourceLocation(Items.brazier.getRegistryName(), "inventory"));
-    }
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public static void onModelRegister (ModelRegistryEvent event) {
+		ModelLoader.setCustomModelResourceLocation(Items.brazier, 0, new ModelResourceLocation(Items.brazier.getRegistryName(), "inventory"));
+	}
 }
